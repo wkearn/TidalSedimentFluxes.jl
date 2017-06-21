@@ -2,10 +2,8 @@
 language: julia
 os:
   - linux
-  - osx
 julia:
-  - 0.5
-  - nightly
+  - 0.6
 notifications:
   email: false
 git:
@@ -26,8 +24,9 @@ git:
 #  - if [ $TRAVIS_OS_NAME = osx ]; then brew install gcc; fi
 
 ## uncomment the following lines to override the default test script
-#script:
-#  - julia -e 'Pkg.clone(pwd()); Pkg.build("TidalSedimentFluxes"); Pkg.test("TidalSedimentFluxes"; coverage=true)'
+script:
+  - julia -e 'Pkg.clone("https://github.com/wkearn/DischargeData.jl");'
+  - julia -e 'Pkg.clone(pwd()); Pkg.build("TidalSedimentFluxes"); Pkg.test("TidalSedimentFluxes"; coverage=true)'
 after_success:
   # push coverage results to Coveralls
   - julia -e 'cd(Pkg.dir("TidalSedimentFluxes")); Pkg.add("Coverage"); using Coverage; Coveralls.submit(Coveralls.process_folder())'

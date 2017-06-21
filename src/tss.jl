@@ -3,4 +3,4 @@ A ``R``-valued time series for total suspended solids
 """
 @quantity TSS Real
 
-TSS(t::Turbidity,c::CalibrationModel{TSS,Turbidity}) = predict(c,t)
+TSS{R,S,T}(t::Turbidity{R},c::CalibrationModel{TSS{S},Turbidity{T}}) = predict(c,t)

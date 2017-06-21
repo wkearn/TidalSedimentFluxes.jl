@@ -26,6 +26,7 @@ git:
 ## uncomment the following lines to override the default test script
 script:
   - julia -e 'Pkg.clone("https://github.com/wkearn/DischargeData.jl");'
+  - julia -e 'Pkg.clone("https://github.com/wkearn/TidalFluxCalibrations.jl"); Pkg.checkout("TidalFluxCalibrations","statsbase")'
   - julia -e 'Pkg.clone(pwd()); Pkg.build("TidalSedimentFluxes"); Pkg.test("TidalSedimentFluxes"; coverage=true)'
 after_success:
   # push coverage results to Coveralls

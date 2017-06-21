@@ -1,6 +1,6 @@
 module TidalSedimentFluxes
 
-using DischargeData
+using DischargeData, TidalFluxCalibrations
 
 export OBS3, AnalogLow, AnalogHigh, Turbidity, TSS
 

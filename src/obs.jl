@@ -6,12 +6,20 @@ struct OBS3
     highrange
 end
 
+"""
+An ``R``-valued time series for low-range 
+analog data
+"""
 @quantity AnalogLow Real
 
+"""
+An ``R``-valued time series for high-range
+analog data
+"""
 @quantity AnalogHigh Real
 
 """
-A ``R``-valued time series for turbidity
+An ``R``-valued time series for turbidity
 
 This is intended to be expressed in 
 nephelometric turbidity units, but could

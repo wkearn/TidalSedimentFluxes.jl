@@ -28,8 +28,8 @@ easily represent turbidity in any unit
 """
 @quantity Turbidity Real
 
-function evalobs(x,obs,low)
-    if low
+function evalobs(x,obs,islow)
+    if islow
         return @evalpoly(x,
                   obs.lowcoeffs[1],
                   obs.lowcoeffs[2],

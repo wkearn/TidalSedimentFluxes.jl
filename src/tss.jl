@@ -1,9 +1,4 @@
 """
-A ``R``-valued time series for total suspended solids
-"""
-@quantity TSS Real
-
-"""
     TSS(t::Turbidity,c::CalibrationModel{TSS,Turbidity})
 
 Given a Turbidity time series and a fitted CalibrationModel (from TFC)

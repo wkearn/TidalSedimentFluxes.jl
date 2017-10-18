@@ -4,4 +4,4 @@
 Given a Turbidity time series and a fitted CalibrationModel (from TFC)
 apply the model to the Turbidity to produce a TSS.
 """
-DischargeData.TSS{R,S,T}(t::Turbidity{R},c::CalibrationModel{TSS{S},Turbidity{T}}) = predict(c,t)
+TidalFluxQuantities.TSS{R,S,T}(t::Turbidity{R},c::CalibrationModel{TSS{S},Turbidity{T}}) = predict(c,t)
